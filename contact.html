@@ -39,20 +39,26 @@
                     won't, there the abundantly she'd she'd brought air
                     upon. Light hath subdue. Life days creature upon
                     first heaven gathering dry.</p>
-                <address>Address: 10111 Santa Monica Boulevard, LA</address>
-                <p>Phone: +44 987 065 908</p>
-                <p>Email: info@Example.com</p>
-                <p>Fax: +44 987 065 908</p>
+                <address class="contact-address">
+                    <p><span>Address:</span> 10111 Santa Monica Boulevard, LA</p>
+                    <p><span>Phone:</span> <a href="tel:44987065908">+44 987 065 908</a></p>
+                    <p><span>Email:</span> <a href="mailto:info@Example.com">info@Example.com</a></p>
+                    <p><span>Fax:</span> +44 987 065 908</p>
+                </address>
             </div>
             <div class="input-wrapper">
-                <form>
-                    <div class="row_flex">
-                        <label class="name"><input type="text" value="Your Name"></label>
-                        <label class="email"><input type="text" value="Your Email"></label>
+                <form class="contact-form" method="post" action="/">
+                    <div class="form-wrapper">
+                        <div class="row_flex">
+                            <label class="name"><input type="text" name="name" required placeholder="Your Name"></label>
+                            <label class="email"><input type="email" name="email" required placeholder="Your Email"></label>
+                        </div>
+                        <label class="title"><input type="text" name="title" placeholder="Your Title"></label>
+                        <label class="comment">
+                            <textarea cols="30" rows="10" name="comment" placeholder="Your Comment"></textarea>
+                        </label>
+                        <label class="button"><button type="submit">Send Message</button></label>
                     </div>
-                    <label class="title"><input type="text" value="Your Title"></label>
-                    <label class="comment"><input type="text" value="Your Comment"></label>
-                    <label class="button"><input type="button" value="Send Message"></label>
                 </form>
             </div>
         </div>
