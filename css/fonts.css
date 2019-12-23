@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito-Regular.eot');
+    src: url('../fonts/Nunito/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nunito/Nunito-Regular.woff2') format('woff2'),
+    url('../fonts/Nunito/Nunito-Regular.woff') format('woff'),
+    url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype'),
+    url('../fonts/Nunito/Nunito-Regular.svg#Nunito-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat/Montserrat-Medium.woff') format('woff'),
+    url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype'),
+    url('../fonts/Montserrat/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Bold.eot');
+    src: url('Nunito-Bold.eot?#iefix') format('embedded-opentype'),
+    url('Nunito-Bold.woff2') format('woff2'),
+    url('Nunito-Bold.woff') format('woff'),
+    url('Nunito-Bold.ttf') format('truetype'),
+    url('Nunito-Bold.svg#Nunito-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
