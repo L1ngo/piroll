@@ -40,24 +40,40 @@
                     upon. Light hath subdue. Life days creature upon
                     first heaven gathering dry.</p>
                 <address class="contact-address">
-                    <p><span>Address:</span> 10111 Santa Monica Boulevard, LA</p>
-                    <p><span>Phone:</span> <a href="tel:44987065908">+44 987 065 908</a></p>
-                    <p><span>Email:</span> <a href="mailto:info@Example.com">info@Example.com</a></p>
-                    <p><span>Fax:</span> +44 987 065 908</p>
+                    <dl>
+                        <dt>Address: </dt>
+                        <dd>10111 Santa Monica Boulevard, LA</dd>
+                    </dl>
+                    <dl>
+                        <dt>Phone: </dt>
+                        <dd><a href="tel:44987065908">+44 987 065 908</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Email: </dt>
+                        <dd><a href="mailto:info@Example.com">info@Example.com</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Fax: </dt>
+                        <dd>+44 987 065 908</dd>
+                    </dl>
                 </address>
             </div>
-            <div class="input-wrapper">
+            <div class="form-wrapper">
                 <form class="contact-form" method="post" action="/">
-                    <div class="form-wrapper">
-                        <div class="row_flex">
-                            <label class="name"><input type="text" name="name" required placeholder="Your Name"></label>
-                            <label class="email"><input type="email" name="email" required placeholder="Your Email"></label>
+                    <div class="form-inner">
+                        <div class="form-row_flex">
+                            <label class="input-wrapper"><input type="text" name="name" required
+                                                                placeholder="Your Name"></label>
+                            <label class="input-wrapper"><input type="email" name="email" required
+                                                                placeholder="Your Email"></label>
                         </div>
-                        <label class="title"><input type="text" name="title" placeholder="Your Title"></label>
-                        <label class="comment">
+                        <label class="input-wrapper"><input type="text" name="title" placeholder="Your Title"></label>
+                        <label class="input-wrapper">
                             <textarea cols="30" rows="10" name="comment" placeholder="Your Comment"></textarea>
                         </label>
-                        <label class="button"><button type="submit">Send Message</button></label>
+                        <label class="input-wrapper">
+                            <button type="submit">Send Message</button>
+                        </label>
                     </div>
                 </form>
             </div>
