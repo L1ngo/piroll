@@ -11,6 +11,11 @@
     box-sizing: border-box;
 }
 
+.section__wrapper{
+    max-width: 500px;
+    text-align: center;
+    margin: auto;}
+
 /* Header */
 
 .header {
@@ -48,7 +53,7 @@
     width: 100%;
 }
 
-.header-hamburger{
+.header-hamburger {
     display: none;
     width: 48px;
     height: 48px;
@@ -126,7 +131,7 @@
     text-decoration: none;
     color: #ffffff;
     background-color: #10c9c3;
-    border: 1px solid #10c9c3;
+    border: 2px solid #10c9c3;
     transition: 0.3s;
 }
 
@@ -142,14 +147,14 @@
     text-align: center;
 }
 
-.about-wrapper {
-    margin: auto;
-    max-width: 600px;
-}
-
 .about-image-wrapper {
     max-width: 220px;
     margin: auto;
+}
+
+.about-image-wrapper img {
+    display: block;
+    width: 100%;
 }
 
 .section__title {
@@ -210,8 +215,11 @@
     object-position: center center;
 }
 
-.progress-title {
+.progress-wrapper{
     padding: 40px 0 5px;
+}
+
+.progress-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -331,7 +339,7 @@
     width: 100%;
 }
 
-.n_def_btn {
+.wide_btn {
     width: 100%;
     border: 0;
     padding: 45px 0;
@@ -344,7 +352,7 @@
     background-color: #f5f5f5;
 }
 
-.n_def_btn:hover {
+.wide_btn:hover {
     color: #ffffff;
     background-color: #10c9c3;
     transition: .3s;
@@ -352,11 +360,8 @@
 
 /* Work */
 
-.work-wrapper {
-    padding-top: 100px;
-    margin: auto;
-    max-width: 510px;
-    text-align: center;
+.work{
+    margin: 100px auto;
 }
 
 .video {
@@ -364,7 +369,6 @@
     width: 100%;
     height: 0;
     padding: calc(570 / 1170 * 100%) 0 100px;
-    margin-bottom: 100px;
 }
 
 .video iframe {
@@ -406,8 +410,12 @@
     margin: 20px auto;
 }
 
+.service-icon img{
+    max-width: 45px;
+}
+
 .service-info {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .service-quantity {
@@ -467,17 +475,19 @@
     padding: 55px 0;
 }
 
+.clients-icon-list li {
+    width: 100%;
+}
+
+.clients-icon-list li img{
+    max-width: 120px;
+}
+
 /* Project */
 
 .project {
     background-color: #f5f5f5;
     padding: 100px 0;
-}
-
-.project-wrapper {
-    margin: auto;
-    text-align: center;
-    max-width: 540px;
 }
 
 .form-row_flex {
@@ -600,6 +610,7 @@
 }
 
 .footer-item_around {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -612,7 +623,6 @@
 }
 
 .footer-nav {
-    margin-right: 25px;
     width: 100%;
     max-width: 225px;
 }
@@ -657,31 +667,66 @@
 }
 
 @media screen and (max-width: 992px) {
+    .about{
+        padding: 50px 0;
+    }
+
+    .skills-info {
+        padding: calc(160 / 1170 * 100%) 5%;
+        width: 50%;
+    }
+
+
+    .addition-list {
+        padding: 100px 0;
+    }
+
+    .service-list li {
+        width: calc(100% / 2);
+    }
+
+    .service-list li span {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .testimonials-wrapper {
+        padding: 100px 0;
+    }
+
+    .work {
+        margin: 50px auto;
+    }
+
+    .project {
+        padding: 50px 0;
+    }
 
 }
 
 
 @media screen and (max-width: 768px) {
-    .header-hamburger{
-        display: block;
-        position: fixed;
-        top: 0;
-        right: 100%;
-    }
+    /*
+       .header-hamburger{
+           display: block;
+           position: fixed;
+           top: 0;
+           right: 100%;
+       }
 
 
 
 
 
 
-    .main-nav{
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-    }
-
+       .main-nav{
+           position: fixed;
+           top: 0;
+           right: 0;
+           width: 100vw;
+           height: 100vh;
+       }
+   */
     .design-wrapper {
         padding: 100px 0;
     }
@@ -716,7 +761,26 @@
     }
 
     .skills-info {
+        padding: 50px 5%;
         width: 100%;
+    }
+
+    .skills-image-wrapper {
+        width: 100%;
+    }
+
+    .skills-image-wrapper img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0, 0);
+    }
+
+    .progress-wrapper {
+        padding: 20px 0 5px;
     }
 
     .progress-title {
@@ -749,12 +813,12 @@
         width: calc(100% / 2);
     }
 
-    .work-wrapper {
-        padding-top: 50px;
-    }
-
     .video {
         margin-bottom: 50px;
+    }
+
+    .services-wrapper {
+        padding: 10px 0;
     }
 
     .service-description {
@@ -762,8 +826,12 @@
         line-height: 18px;
     }
 
+    .service-info {
+        padding-bottom: 20px;
+    }
+
     .service-list li {
-        width: calc(100% / 2);
+        width: calc(100%);
     }
 
     .service-list li span {
@@ -772,18 +840,24 @@
     }
 
     .testimonials-wrapper {
-        padding: 70px 0;
+        padding: 20px 0;
     }
 
     .testimonials-title {
+        padding-bottom: 20px;
         font-size: 18px;
         line-height: 26px;
     }
 
     .clients-icon-list {
-        flex-direction: column;
+        padding: 30px 0;
         flex-wrap: wrap;
+    }
+
+    .clients-icon-list li {
         width: calc(100% / 2);
+        text-align: center;
+        padding: 20px;
     }
 
     .project {
@@ -793,5 +867,34 @@
     .form-row_flex {
         flex-direction: column;
     }
+
+    .footer-wrapper {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 45px 0;
+    }
+
+    .footer-item {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .footer-item:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .contact-list {
+        margin-right: 0;
+    }
+
+    .copyright, .footer-nav__list li a, .contact-list li a, .social-list li a {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+
+
 
 }
