@@ -11,10 +11,11 @@
     box-sizing: border-box;
 }
 
-.section__wrapper{
+.section__wrapper {
     max-width: 500px;
     text-align: center;
-    margin: auto;}
+    margin: auto;
+}
 
 /* Header */
 
@@ -29,8 +30,8 @@
 
 .header_scroll {
     background-color: #fff;
-    -moz-box-shadow: 0 3px 23px -3px rgba(0,0,0,0.75);
-    box-shadow: 0 3px 23px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 3px 23px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 3px 23px -3px rgba(0, 0, 0, 0.75);
 }
 
 .header_scroll .main-nav-list li a {
@@ -63,12 +64,36 @@
     width: 100%;
 }
 
-.header-hamburger {
+.header-burger {
+    position: relative;
     display: none;
-    width: 48px;
-    height: 48px;
+    width: 28px;
+    height: 20px;
+    background-color: transparent;
+    border: 0;
 }
 
+.header-burger-menu,
+.header-burger::before,
+.header-burger::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 100%;
+    background: black;
+}
+
+.header-burger::before {
+    content: '';
+    top: 0;
+}
+
+.header-burger::after {
+    content: '';
+    top: 100%;
+}
 
 .main-nav-list {
     display: flex;
@@ -225,8 +250,8 @@
     object-position: center center;
 }
 
-.progress-wrapper{
-    padding: 40px 0 5px;
+.progress-wrapper {
+    padding-top: 40px;
 }
 
 .progress-title {
@@ -370,7 +395,7 @@
 
 /* Work */
 
-.work{
+.work {
     margin: 100px auto;
 }
 
@@ -413,15 +438,20 @@
 }
 
 .service-list li span {
+    padding-bottom: 10px;
     display: block;
 }
 
 .service-list li .service-icon {
-    margin: 20px auto;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    max-width: 45px;
 }
 
-.service-icon img{
-    max-width: 45px;
+.service-icon img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
 }
 
 .service-info {
@@ -489,8 +519,13 @@
     width: 100%;
 }
 
-.clients-icon-list li img{
+.clients-icon-list-img {
     max-width: 120px;
+}
+
+.clients-icon-list-img img {
+    display: block;
+    width: 100%;
 }
 
 /* Project */
@@ -677,7 +712,7 @@
 }
 
 @media screen and (max-width: 992px) {
-    .about{
+    .about {
         padding: 50px 0;
     }
 
@@ -691,12 +726,20 @@
         padding: 100px 0;
     }
 
+    .addition-list li .addition-icon {
+        margin-right: 15px;
+    }
+
+    .service-info {
+        margin-bottom: 20px;
+    }
+
     .service-list li {
         width: calc(100% / 2);
     }
 
     .service-list li span {
-        padding: 10px;
+        padding-bottom: 10px;
         text-align: center;
     }
 
@@ -716,8 +759,25 @@
 
 
 @media screen and (max-width: 768px) {
+    .header-wrapper {
+        padding: 15px 0;
+    }
+
+    .header-burger {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        height: 100vh;
+        left: 100%;
+    }
+
     .design-wrapper {
-        padding: 100px 0;
+        padding: 70px 0;
+        margin: 0 auto;
     }
 
     .app__title {
@@ -815,21 +875,13 @@
         line-height: 18px;
     }
 
-    .service-info {
-        padding-bottom: 20px;
-    }
-
-    .service-list li {
-        width: calc(100%);
-    }
 
     .service-list li span {
-        padding: 10px;
-        text-align: center;
+
     }
 
     .testimonials-wrapper {
-        padding: 20px 0;
+        padding: 50px 0;
     }
 
     .testimonials-title {
@@ -880,5 +932,11 @@
     .copyright, .footer-nav__list li a, .contact-list li a, .social-list li a {
         font-size: 12px;
         line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .service-list li {
+        width: calc(100%);
     }
 }
