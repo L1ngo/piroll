@@ -20,11 +20,21 @@
 
 .header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    transition: .3s;
+    z-index: 3;
 }
 
 .header_scroll {
+    background-color: #fff;
+    -moz-box-shadow: 0 3px 23px -3px rgba(0,0,0,0.75);
+    box-shadow: 0 3px 23px -3px rgba(0,0,0,0.75);
+}
 
+.header_scroll .main-nav-list li a {
+    height: 80px;
 }
 
 .header-wrapper {
@@ -706,27 +716,6 @@
 
 
 @media screen and (max-width: 768px) {
-    /*
-       .header-hamburger{
-           display: block;
-           position: fixed;
-           top: 0;
-           right: 100%;
-       }
-
-
-
-
-
-
-       .main-nav{
-           position: fixed;
-           top: 0;
-           right: 0;
-           width: 100vw;
-           height: 100vh;
-       }
-   */
     .design-wrapper {
         padding: 100px 0;
     }
@@ -892,9 +881,4 @@
         font-size: 12px;
         line-height: 16px;
     }
-
-
-
-
-
 }
